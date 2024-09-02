@@ -7,6 +7,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Separator } from "./ui/separator";
+import { BsSearch } from "react-icons/bs";
 
 function Search() {
   return (
@@ -22,7 +23,7 @@ function Search() {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
-        <Separator orientation="vertical" />
+        <Separator orientation="vertical" className="hidden md:block" />
         <Select>
           <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Theme" />
@@ -44,6 +45,7 @@ function Search() {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
+        <BsSearch className="text-xl" />
       </div>
     </>
   );
