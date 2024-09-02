@@ -10,9 +10,9 @@ import {
 function Search() {
   return (
     <>
-      <div className="p-2 bg-white rounded-md md:rounded-full flex-col md:flex md:flex-row gap-10 px-5 items-center w-full md:w-max">
+      <div className="p-2 bg-white md:p-5 rounded-md md:rounded-full flex-col md:flex md:flex-row gap-10 px-5 items-center w-[60%]">
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Theme" />
           </SelectTrigger>
           <SelectContent>
@@ -22,7 +22,7 @@ function Search() {
           </SelectContent>
         </Select>
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Theme" />
           </SelectTrigger>
           <SelectContent>
@@ -32,7 +32,7 @@ function Search() {
           </SelectContent>
         </Select>
         <Select>
-          <SelectTrigger className="w-[180px]">
+          <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Theme" />
           </SelectTrigger>
           <SelectContent>
