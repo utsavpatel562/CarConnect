@@ -34,7 +34,7 @@ function Search() {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
-        <Separator orientation="vertical" />
+        <Separator orientation="vertical" className="hidden md:block" />
         <Select>
           <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Theme" />
@@ -45,7 +45,9 @@ function Search() {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
-        <BsSearch className="text-xl" />
+        <div>
+          <BsSearch className="text-xl bg-primary rounded-full p-4" />
+        </div>
       </div>
     </>
   );
