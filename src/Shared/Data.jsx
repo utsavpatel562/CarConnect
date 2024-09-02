@@ -42,3 +42,47 @@ const Pricing = [
     amount: "$80000",
   },
 ];
+
+const Cateory = [
+  {
+    id: 1,
+    name: "SUV",
+  },
+  {
+    id: 2,
+    name: "Sedan",
+  },
+  {
+    id: 3,
+    name: "Hatchback",
+  },
+  {
+    id: 4,
+    name: "Hybrid",
+  },
+  {
+    id: 5,
+    name: "Coupe",
+  },
+  {
+    id: 6,
+    name: "Van",
+  },
+  {
+    id: 7,
+    name: "Truck",
+  },
+  {
+    id: 8,
+    name: "Electric",
+  },
+  {
+    id: 9,
+    name: "Convertible",
+  },
+];
+export default {
+  CarMakes,
+  Pricing,
+  Cateory,
+};
