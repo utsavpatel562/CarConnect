@@ -6,6 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Separator } from "./ui/separator";
 
 function Search() {
   return (
@@ -21,6 +22,7 @@ function Search() {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
+        <Separator orientation="vertical" />
         <Select>
           <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Theme" />
@@ -31,6 +33,7 @@ function Search() {
             <SelectItem value="system">System</SelectItem>
           </SelectContent>
         </Select>
+        <Separator orientation="vertical" />
         <Select>
           <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Theme" />
