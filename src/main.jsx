@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./home";
 import Contact from "./contact";
 import { ClerkProvider } from "@clerk/clerk-react";
-// By Utsav Patel
+// Code By Utsav Patel
 const router = createBrowserRouter([
   {
     path: "/",
