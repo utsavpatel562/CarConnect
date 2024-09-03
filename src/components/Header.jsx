@@ -29,7 +29,7 @@ function Header() {
           <div className="flex items-center gap-5">
             <UserButton />
             <HoverBorderGradient
-              containerClassName="rounded-full"
+              containerClassName="rounded-lg"
               as="button"
               className="dark:bg-black bg-black text-slate-200 dark:text-white flex items-center space-x-2"
             >

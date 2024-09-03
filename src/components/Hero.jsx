@@ -10,6 +10,7 @@ function Hero() {
     },
     {
       text: ".",
+      className: "text-transparent",
     },
     {
       text: "Dream Car !",
@@ -19,7 +20,13 @@ function Hero() {
   return (
     <>
       <div>
-        <div className="flex flex-col items-center p-10 py-20 gap-2 h-[650px] w-full bg-[#000]">
+        <div
+          className="flex flex-col items-center p-10 py-20 gap-2 h-[650px] w-full"
+          style={{
+            background:
+              "linear-gradient(to top, #1a1a1c, #131e27, #00242b, #002922, #042c0d)",
+          }}
+        >
           <h2 className="text-lg text-slate-200">
             Find cars for sales and for rent near you
           </h2>
