@@ -13,7 +13,12 @@ import Data from "@/Shared/Data";
 function Search() {
   return (
     <>
-      <div className="p-2 bg-white md:p-5 rounded-md md:rounded-full flex-col md:flex md:flex-row gap-10 px-5 items-center w-[60%]">
+      <div
+        className="p-2 bg-white md:p-5 rounded-md md:rounded-full flex-col md:flex md:flex-row gap-10 px-5 items-center w-[60%]"
+        style={{
+          boxShadow: "0 1px 10px 1.5px #ffffff",
+        }}
+      >
         <Select>
           <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Cars" />
