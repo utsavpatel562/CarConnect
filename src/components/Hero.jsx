@@ -34,7 +34,7 @@ function Hero() {
             <TypewriterEffectSmooth words={words} />
           </h2>
           <Search />
-          <img src="/car1.png" className="w-[950px]" />
+          <img src="/car1.png" className="w-[1050px] mt-10" />
         </div>
       </div>
     </>
