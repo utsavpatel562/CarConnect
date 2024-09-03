@@ -1,8 +1,8 @@
-import { SignInButton } from "@clerk/clerk-react";
 import React from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Catetory from "./components/Catetory";
+import MostSearchedCar from "./components/MostSearchedCar";
 
 function Home() {
   return (
@@ -10,6 +10,7 @@ function Home() {
       <Header />
       <Hero />
       <Catetory />
+      <MostSearchedCar />
     </div>
   );
 }
