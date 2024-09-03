@@ -47,38 +47,42 @@ const Cateory = [
   {
     id: 1,
     name: "SUV",
+    icon: "/suv.png",
   },
   {
     id: 2,
     name: "Sedan",
+    icon: "/sedan.png",
   },
   {
     id: 3,
     name: "Hatchback",
+    icon: "/hatchback.png",
   },
   {
     id: 4,
-    name: "Hybrid",
+    name: "Coupe",
+    icon: "/coupe.png",
   },
   {
     id: 5,
-    name: "Coupe",
+    name: "Convertible",
+    icon: "/convertible.png",
   },
   {
     id: 6,
-    name: "Van",
+    name: "Electric",
+    icon: "/electric.png",
   },
   {
     id: 7,
-    name: "Truck",
+    name: "Van",
+    icon: "/van.png",
   },
   {
     id: 8,
-    name: "Electric",
-  },
-  {
-    id: 9,
-    name: "Convertible",
+    name: "Truck",
+    icon: "/truck.png",
   },
 ];
 export default {

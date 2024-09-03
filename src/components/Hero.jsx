@@ -24,7 +24,7 @@ function Hero() {
           className="flex flex-col items-center p-10 py-20 gap-2 h-[650px] w-full"
           style={{
             background:
-              "linear-gradient(to top, #1a1a1c, #131e27, #00242b, #002922, #042c0d)",
+              "linear-gradient(to top, #1f1f20, #191e23, #0d1f22, #051f1a, #0b1d0b)",
           }}
         >
           <h2 className="text-lg text-slate-200">
