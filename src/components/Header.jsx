@@ -1,6 +1,7 @@
+"use client";
 import { UserButton, useUser } from "@clerk/clerk-react";
 import React from "react";
-import { Button } from "./ui/button";
+import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
 function Header() {
   const { user, isSignedIn } = useUser();
@@ -25,7 +26,13 @@ function Header() {
         {isSignedIn ? (
           <div className="flex items-center gap-5">
             <UserButton />
-            <Button>Submit Listing</Button>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <span>Aceternity UI</span>
+            </HoverBorderGradient>
           </div>
         ) : (
           <div>Submit Listing</div>
