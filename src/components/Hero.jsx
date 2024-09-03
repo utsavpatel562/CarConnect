@@ -6,7 +6,7 @@ function Hero() {
   const words = [
     {
       text: "Find Your ",
-      className: "text-slate-200 gap-2",
+      className: "text-slate-700 gap-2",
     },
     {
       text: ".",
@@ -24,10 +24,10 @@ function Hero() {
           className="flex flex-col items-center p-10 py-20 gap-2 h-[650px] w-full"
           style={{
             background:
-              "linear-gradient(to top, #1f1f20, #191e23, #0d1f22, #051f1a, #0b1d0b)",
+              "radial-gradient(circle, #e1e5e9, #dee4ed, #dde3f1, #dde1f5, #e0dff8)",
           }}
         >
-          <h2 className="text-lg text-slate-200">
+          <h2 className="text-lg text-slate-700">
             Find cars for sales and for rent near you
           </h2>
           <h2 className="text-[60px] font-bold">

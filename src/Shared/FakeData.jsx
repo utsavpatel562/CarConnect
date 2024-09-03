@@ -16,4 +16,4 @@ function createRandowCarList() {
 const carList = faker.helpers.multiple(createRandowCarList, {
   count: 7,
 });
-export default carList;
+export default { carList };
