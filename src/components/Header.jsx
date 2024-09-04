@@ -2,6 +2,9 @@
 import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import React from "react";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
+import { Button } from "./ui/button";
+import { TiThList } from "react-icons/ti";
+
 function Header() {
   const { user, isSignedIn } = useUser();
   return (
@@ -28,13 +31,10 @@ function Header() {
         {isSignedIn ? (
           <div className="flex items-center gap-5">
             <UserButton />
-            <HoverBorderGradient
-              containerClassName="rounded-lg"
-              as="button"
-              className="dark:bg-black bg-black text-slate-200 dark:text-white flex items-center space-x-2"
-            >
-              <span>Submit Listing</span>
-            </HoverBorderGradient>
+            <Button className="bg-slate-700 hover:bg-slate-800">
+              <TiThList className="mr-2 h-4 w-4" />
+              Submit Listing
+            </Button>
           </div>
         ) : (
           <div className="flex items-center gap-5">
