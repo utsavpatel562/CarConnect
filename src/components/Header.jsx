@@ -1,5 +1,5 @@
 "use client";
-import { UserButton, useUser } from "@clerk/clerk-react";
+import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import React from "react";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 function Header() {
@@ -37,7 +37,18 @@ function Header() {
             </HoverBorderGradient>
           </div>
         ) : (
-          <div>Submit Listing</div>
+          <div className="flex items-center gap-5">
+            <UserButton />
+            <HoverBorderGradient
+              containerClassName="rounded-lg"
+              as="button"
+              className="dark:bg-black bg-black text-slate-200 dark:text-white flex items-center space-x-2"
+            >
+              <span>
+                <SignInButton />
+              </span>
+            </HoverBorderGradient>
+          </div>
         )}
       </div>
     </>

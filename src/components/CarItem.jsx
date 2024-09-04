@@ -8,10 +8,10 @@ import { FaLink } from "react-icons/fa";
 function CarItem({ car }) {
   return (
     <>
-      <div>
+      <div className="rounded-xl bg-white border hover:shadow-sm cursor-pointer">
         <img
           src={car?.image}
-          width={300}
+          width={"100%"}
           height={250}
           className="rounded-t-xl"
         />
