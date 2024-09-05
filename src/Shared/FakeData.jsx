@@ -6,7 +6,7 @@ function createRandowCarList() {
     model: faker.vehicle.model(),
     type: faker.vehicle.type(),
     image:
-      "https://motorshow.com.br/wp-content/uploads/sites/2/2023/03/12-bmw-ix3-m-sport.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9JZHWUfUOdBC9127nbz1687KS6GaxKXdLA&s",
     miles: 1000,
     gearType: "Automatic",
     price: faker.finance.amount({ min: 4000, max: 20000 }),
