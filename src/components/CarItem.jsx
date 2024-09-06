@@ -9,7 +9,7 @@ function CarItem({ car }) {
   return (
     <>
       <div className="rounded-xl bg-white border hover:shadow-sm cursor-pointer">
-        <h2 className="absolute m-3 bg-green-500 px-2 rounded-full text-sm text-white">
+        <h2 className="absolute m-3 bg-primary px-2 rounded-full text-sm text-white">
           New
         </h2>
         <img
