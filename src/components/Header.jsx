@@ -4,6 +4,7 @@ import React from "react";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { Button } from "./ui/button";
 import { TiThList } from "react-icons/ti";
+import { Link } from "react-router-dom";
 
 function Header() {
   const { user, isSignedIn } = useUser();
@@ -15,9 +16,11 @@ function Header() {
       >
         <img src="/logo4.png" alt="Logo" width={150} height={100} />
         <ul className="hidden md:flex gap-16">
-          <li className="font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
-            Home
-          </li>
+          <Link to={"/"}>
+            <li className="font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+              Home
+            </li>
+          </Link>
           <li className="font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
             Search
           </li>
@@ -31,10 +34,12 @@ function Header() {
         {isSignedIn ? (
           <div className="flex items-center gap-5">
             <UserButton />
-            <Button className="bg-slate-700 hover:bg-slate-800">
-              <TiThList className="mr-2 h-4 w-4" />
-              Submit Listing
-            </Button>
+            <Link to={"/profile"}>
+              <Button className="bg-slate-700 hover:bg-slate-800">
+                <TiThList className="mr-2 h-4 w-4" />
+                Submit Listing
+              </Button>
+            </Link>
           </div>
         ) : (
           <div className="flex items-center gap-5">
@@ -45,7 +50,7 @@ function Header() {
               className="dark:bg-black bg-black text-slate-200 dark:text-white flex items-center space-x-2"
             >
               <span>
-                <SignInButton />
+                <SignInButton /> {/* Changes for second button */}
               </span>
             </HoverBorderGradient>
           </div>
