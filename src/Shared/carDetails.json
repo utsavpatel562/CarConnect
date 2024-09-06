@@ -96,6 +96,111 @@
             ],
             "column": 1,
             "icon" : "FaIndustry"
+        },
+        {
+            "label": "Model",
+            "name" : "model",
+            "fieldType" : "text",
+            "required": true,
+            "column": 1,
+            "icon" : "FaCarSide"
+        },
+        {
+            "label": "Year",
+            "name" : "year",
+            "fieldType" : "number",
+            "required": true,
+            "column": 1,
+            "icon" : "FaCalendarAlt"
+        },
+        {
+            "label": "Drive Type",
+            "name" : "driveType",
+            "fieldType" : "dropdown",
+            "required": true,
+            "options": ["FWD", "RWD", "AWD", "4WD"],
+            "column": 1,
+            "icon" : "FaRoad"
+        },
+        {
+            "label": "Transmission",
+            "name" : "transmission",
+            "fieldType" : "dropdown",
+            "required": true,
+            "options": ["Automatic", "Manual", "CVT"],
+            "column": 1,
+            "icon" : "FaCogs"
+        },
+        {
+            "label": "Fuel Type",
+            "name" : "fuelType",
+            "fieldType" : "dropdown",
+            "options": ["Petrol", "Diesel", "Electric", "Hybrid"],
+            "required": true,
+            "column": 1,
+            "icon" : "FaGasPump"
+        },
+        {
+            "label": "Mileage",
+            "name" : "mileage",
+            "fieldType" : "number",
+            "required": true,
+            "column": 1,
+            "icon" : "FaTachometerAlt"
+        },
+        {
+            "label": "Engine Size",
+            "name" : "engineSize",
+            "fieldType" : "text",
+            "column": 1,
+            "icon" : "FaWrench"
+        },
+        {
+            "label": "Cylinder",
+            "name" : "cyliner",
+            "fieldType" : "number",
+            "column": 1,
+            "icon" : "FaCircle"
+        },
+        {
+            "label": "Color",
+            "name" : "color",
+            "fieldType" : "checkbox",
+            "required": true,
+            "options": ["White", "Black", "Blue", "Green", "Silver", "Gold", "Pink"],
+            "column": 2,
+            "icon" : "FaPalette"
+        },
+        {
+            "label": "Door",
+            "name" : "door",
+            "fieldType" : "number",
+            "required": true,
+            "column": 1,
+            "icon" : "FaDoorClosed"
+        },
+        {
+            "label": "VIN",
+            "name" : "vin",
+            "fieldType" : "text",
+            "column": 1,
+            "icon" : "FaIdCard"
+        },
+        {
+            "label": "Offer Type",
+            "name" : "offerType",
+            "fieldType" : "dropdown",
+            "options": ["Buy", "Hot Offer", "Sell", "Urgent"],
+            "column": 2,
+            "icon" : "FaTags"
+        },
+        {
+            "label": "Listing Description",
+            "name" : "listingDescription",
+            "fieldType" : "textarea",
+            "required": true,
+            "column": 2,
+            "icon" : "FaFileAlt"
         }
     ]
 }

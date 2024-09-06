@@ -1,0 +1,79 @@
+{
+    "features": [
+        {
+            "label" : "Air Conditioner", 
+            "name" : "airConditioner",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Digital Odometer", 
+            "name" : "digitalOdometer",
+            "fieldType": "checkbox"   
+        },
+        {
+            "label" : "Heater", 
+            "name" : "heater",
+            "fieldType": "checkbox"   
+        },
+        {
+            "label" : "Leather Seats", 
+            "name" : "leatherSeats",
+            "fieldType": "checkbox"   
+        },
+        {
+            "label" : "Sunroof", 
+            "name" : "sunroof",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Bluetooth Connectivity", 
+            "name" : "bluetoothConnectivity",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Rear Camera", 
+            "name" : "rearCamera",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Cruise Control", 
+            "name" : "cruiseControl",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "GPS Navigation", 
+            "name" : "gpsNavigation",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Parking Sensors", 
+            "name" : "parkingSensors",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Automatic Headlights", 
+            "name" : "automaticHeadlights",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Keyless Entry", 
+            "name" : "keylessEntry",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Heated Steering Wheel", 
+            "name" : "heatedSteeringWheel",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Power Windows", 
+            "name" : "powerWindows",
+            "fieldType": "checkbox"
+        },
+        {
+            "label" : "Alloy Wheels", 
+            "name" : "alloyWheels",
+            "fieldType": "checkbox"
+        }
+    ]
+}
