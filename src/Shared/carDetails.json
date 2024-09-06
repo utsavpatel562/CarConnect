@@ -1,0 +1,101 @@
+{
+    "carDetails": [
+        {
+            "label": "Listing Title",
+            "name" : "listingTitle",
+            "fieldType" : "text",
+            "required": true,
+            "column": 2,
+            "icon" : "FaClipboardList"
+        },
+        {
+            "label": "Tagline",
+            "name" : "tagline",
+            "fieldType" : "text",
+            "column": 2,
+            "icon" : "FaTag"
+        },
+        {
+            "label": "Listing Title",
+            "name" : "listingTitle",
+            "fieldType" : "text",
+            "required": true,
+            "column": 2,
+            "icon" : "FaClipboardList"
+        },
+        {
+            "label": "Original Price",
+            "name" : "originalPrice",
+            "fieldType" : "text",
+            "column": 1,
+            "icon" : "FaMoneyBillAlt"
+        },
+        {
+            "label": "Category",
+            "name" : "category",
+            "fieldType" : "dropdown",
+            "options": ["Sedan", "SUV", "Truck", "Coupe", "Convertible", "Van", "Electric", "Hatchback"],
+            "required": true,
+            "column": 1,
+            "icon" : "FaCar"
+        },
+        {
+            "label": "Condition",
+            "name" : "condition",
+            "fieldType" : "dropdown",
+            "required": true,
+            "options": ["New", "Used", "Certified Pre-Owned"],
+            "column": 1,
+            "icon" : "FaCheckedCircle"
+        },
+        {
+            "label": "Type",
+            "name" : "type",
+            "fieldType" : "dropdown",
+            "required": true,
+            "options" : ["Electric", "Hybrid", "Petrol", "Diesel"],
+            "column": 1,
+            "icon" : "FaChargingStation"
+        },
+        {
+            "label": "Make",
+            "name" : "make",
+            "fieldType" : "dropdown",
+            "required": true,
+            "options": [
+                "Toyota",
+                "BMW",
+                "Honda",
+                "Kia",
+                "Tesla",
+                "Nissan",
+                "Ford",
+                "Chevrolet",
+                "Audi",
+                "Lexus",
+                "Jeep",
+                "Mazda",
+                "Dodge",
+                "Ram",
+                "Mercedes-Benz",
+                "Hyundai",
+                "Subaru",
+                "Volkswagen",
+                "Cadillac",
+                "Lincoln",
+                "Bentley",
+                "Maserati",
+                "Rolls-Royce",
+                "Aston Martin",
+                "Ferrari",
+                "Lamborghini",
+                "McLaren",
+                "Pagani",
+                "Bugatti",
+                "Chrysler"
+            ],
+            "column": 1,
+            "icon" : "FaIndustry"
+        }
+    ]
+}
