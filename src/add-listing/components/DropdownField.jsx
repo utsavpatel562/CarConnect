@@ -7,18 +7,18 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-function DropdownField() {
+function DropdownField({ item }) {
   return (
     <>
       <div>
         <Select>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Theme" />
+          <SelectTrigger className="w-full">
+            <SelectValue placeholder={item.label} />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="light">Light</SelectItem>
-            <SelectItem value="dark">Dark</SelectItem>
-            <SelectItem value="system">System</SelectItem>
+            {item?.options?.map((option, index) => (
+              <SelectItem value={option}>{option}</SelectItem>
+            ))}
           </SelectContent>
         </Select>
       </div>

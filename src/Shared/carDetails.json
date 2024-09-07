@@ -165,7 +165,7 @@
         {
             "label": "Color",
             "name" : "color",
-            "fieldType" : "checkbox",
+            "fieldType" : "dropdown",
             "required": true,
             "options": ["White", "Black", "Blue", "Green", "Silver", "Gold", "Pink"],
             "column": 2,

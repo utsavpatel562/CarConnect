@@ -3,6 +3,9 @@ import React from "react";
 import carDetails from "./../Shared/carDetails.json";
 import InputField from "./components/InputField";
 import DropdownField from "./components/DropdownField";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Separator } from "@/components/ui/separator";
 
 function AddListing() {
   return (
@@ -24,11 +27,17 @@ function AddListing() {
                     {item.fieldType == "text" || item.fieldType == "number" ? (
                       <InputField item={item} />
                     ) : item.fieldType == "dropdown" ? (
-                      <DropdownField />
+                      <DropdownField item={item} />
+                    ) : item.fieldType == "textarea" ? (
+                      <Textarea item={item} />
                     ) : null}
                   </div>
                 ))}
               </div>
+            </div>
+            <Separator className="my-6" />
+            <div>
+              <h2 className="font-medium text-xl my-6">Features</h2>
             </div>
           </form>
         </div>
