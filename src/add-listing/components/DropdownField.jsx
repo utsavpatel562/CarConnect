@@ -12,7 +12,7 @@ function DropdownField({ item }) {
     <>
       <div>
         <Select>
-          <SelectTrigger className="w-full">
+          <SelectTrigger className="w-full mt-2">
             <SelectValue placeholder={item.label} />
           </SelectTrigger>
           <SelectContent>

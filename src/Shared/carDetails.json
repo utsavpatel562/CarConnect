@@ -16,14 +16,6 @@
             "icon" : "FaTag"
         },
         {
-            "label": "Listing Title",
-            "name" : "listingTitle",
-            "fieldType" : "text",
-            "required": true,
-            "column": 2,
-            "icon" : "FaClipboardList"
-        },
-        {
             "label": "Original Price",
             "name" : "originalPrice",
             "fieldType" : "text",
