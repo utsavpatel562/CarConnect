@@ -20,6 +20,11 @@ function AddListing() {
     console.log(formData);
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
     <>
       <div>
@@ -78,7 +83,11 @@ function AddListing() {
                 ))}
               </div>
               <div className="flex justify-end mt-8">
-                <Button className="px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-200">
+                <Button
+                  type="submit"
+                  onClick={(e) => onSubmit(e)}
+                  className="px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-200"
+                >
                   Submit
                 </Button>
               </div>

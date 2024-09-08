@@ -8,6 +8,7 @@ function TextAreaField({ item, handleInputChange }) {
         <Textarea
           className="mt-2"
           onChange={(e) => handleInputChange(item.name, e.target.value)}
+          required={item.required}
         />
       </div>
     </>
