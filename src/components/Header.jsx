@@ -5,6 +5,11 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { Button } from "./ui/button";
 import { TiThList } from "react-icons/ti";
 import { Link } from "react-router-dom";
+import { HiOutlineHome } from "react-icons/hi";
+import { CiSearch } from "react-icons/ci";
+import { MdOutlineWidgets } from "react-icons/md";
+import { IoCarSportOutline } from "react-icons/io5";
+import { GoCodeSquare } from "react-icons/go";
 
 function Header() {
   const { user, isSignedIn } = useUser();
@@ -15,20 +20,28 @@ function Header() {
         style={{}}
       >
         <img src="/logo4.png" alt="Logo" width={150} height={100} />
-        <ul className="hidden md:flex gap-16">
+        <ul className="hidden md:flex gap-10">
           <Link to={"/"}>
-            <li className="font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+            <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+              <HiOutlineHome />
               Home
             </li>
           </Link>
-          <li className="font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
-            Search
-          </li>
-          <li className="font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+            <MdOutlineWidgets />
             New
           </li>
-          <li className="font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+            <IoCarSportOutline />
             Preowned
+          </li>
+          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+            <CiSearch />
+            Search
+          </li>
+          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+            <GoCodeSquare />
+            Developer
           </li>
         </ul>
         {isSignedIn ? (
