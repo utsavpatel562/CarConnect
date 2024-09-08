@@ -4,11 +4,11 @@ import React, { useState } from "react";
 import carDetails from "./../Shared/carDetails.json";
 import InputField from "./components/InputField";
 import DropdownField from "./components/DropdownField";
-import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 import features from "./../Shared/features.json";
 import { Button } from "@/components/ui/button";
+import TextAreaField from "./components/TextAreaField";
 
 function AddListing() {
   const [formData, setFormData] = useState([]);
@@ -51,7 +51,7 @@ function AddListing() {
                         className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                       />
                     ) : item.fieldType == "textarea" ? (
-                      <Textarea
+                      <TextAreaField
                         item={item}
                         handleInputChange={handleInputChange}
                         className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
@@ -67,7 +67,12 @@ function AddListing() {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
                 {features.features.map((item, index) => (
                   <div key={index} className="flex gap-2 items-center">
-                    <Checkbox className="h-5 w-5 text-indigo-600 border-gray-300 rounded" />
+                    <Checkbox
+                      onCheckedChange={(value) =>
+                        handleInputChange(item.name, value)
+                      }
+                      className="h-5 w-5 text-indigo-600 border-gray-300 rounded"
+                    />
                     <span className="text-gray-700">{item.label}</span>
                   </div>
                 ))}

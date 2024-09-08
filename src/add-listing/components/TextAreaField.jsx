@@ -6,6 +6,7 @@ function TextAreaField({ item, handleInputChange }) {
     <>
       <div>
         <Textarea
+          className="mt-2"
           onChange={(e) => handleInputChange(item.name, e.target.value)}
         />
       </div>
