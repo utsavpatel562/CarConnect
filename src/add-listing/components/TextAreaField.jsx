@@ -1,11 +1,13 @@
 import { Textarea } from "@/components/ui/textarea";
 import React from "react";
 
-function TextAreaField() {
+function TextAreaField({ item, handleInputChange }) {
   return (
     <>
       <div>
-        <Textarea />
+        <Textarea
+          onChange={(e) => handleInputChange(item.name, e.target.value)}
+        />
       </div>
     </>
   );

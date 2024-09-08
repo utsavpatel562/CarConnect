@@ -7,11 +7,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-function DropdownField({ item }) {
+function DropdownField({ item, handleInputChange }) {
   return (
     <>
       <div>
-        <Select>
+        <Select onValueChange={(value) => handleInputChange(item.name, value)}>
           <SelectTrigger className="w-full mt-2">
             <SelectValue placeholder={item.label} />
           </SelectTrigger>

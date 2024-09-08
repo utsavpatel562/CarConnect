@@ -46,12 +46,14 @@ function AddListing() {
                       />
                     ) : item.fieldType == "dropdown" ? (
                       <DropdownField
+                        handleInputChange={handleInputChange}
                         item={item}
                         className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                       />
                     ) : item.fieldType == "textarea" ? (
                       <Textarea
                         item={item}
+                        handleInputChange={handleInputChange}
                         className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                       />
                     ) : null}
