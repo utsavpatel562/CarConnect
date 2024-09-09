@@ -39,10 +39,12 @@ function Header() {
             <CiSearch />
             Search
           </li>
-          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
-            <GoCodeSquare />
-            Developer
-          </li>
+          <Link to={"/aboutme"}>
+            <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+              <GoCodeSquare />
+              Developer
+            </li>
+          </Link>
         </ul>
         {isSignedIn ? (
           <div className="flex items-center gap-5">

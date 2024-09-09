@@ -7,6 +7,7 @@ import Contact from "./contact";
 import { ClerkProvider } from "@clerk/clerk-react";
 import Profile from "./profile";
 import AddListing from "./add-listing";
+import AboutUs from "./aboutme";
 // Code By Utsav Patel
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/add-listing",
     element: <AddListing />,
+  },
+  {
+    path: "/aboutme",
+    element: <AboutUs />,
   },
 ]);
 
