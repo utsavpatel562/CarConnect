@@ -3,6 +3,7 @@ import React from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -33,19 +34,28 @@ function AboutUs() {
                   Acernity, and Hyper UI. Deployed on Netlify, CarConnect
                   delivers a fast and responsive user experience.
                 </p>
-                <div className="my-5 flex gap-3">
-                  <FaInstagram
-                    style={{ fontSize: "32px" }}
+                <div className="my-5 flex gap-3 items-center">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/utsavpatel_01"
                     className="cursor-pointer hover:bg-pink-500 hover:text-white p-1 rounded-lg"
-                  />
-                  <FiGithub
-                    style={{ fontSize: "32px" }}
+                  >
+                    <FaInstagram style={{ fontSize: "25px" }} />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://github.com/utsavpatel562"
                     className="cursor-pointer hover:bg-slate-900 hover:text-white p-1 rounded-lg"
-                  />
-                  <FaLinkedinIn
-                    style={{ fontSize: "32px" }}
+                  >
+                    <FiGithub style={{ fontSize: "25px" }} />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/utsav-patel-coder"
                     className="cursor-pointer hover:bg-blue-600 hover:text-white p-1 rounded-lg"
-                  />
+                  >
+                    <FaLinkedinIn style={{ fontSize: "25px" }} />
+                  </a>
                 </div>
               </div>
             </article>
