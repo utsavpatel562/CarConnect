@@ -18,7 +18,7 @@ Welcome to **CarConnect**, the ultimate marketplace for buying and selling cars!
 
 - 📊 **Mock Data with Faker.dev:** Used **Faker.dev** for generating realistic mock data, making the development and testing process smoother.
 
-- 🚀 **Deployment on Vercel:** Deployed the application to production with **Vercel** for fast, reliable, and scalable hosting.
+- 🚀 **Deployment on Vercel:** Deployed the application to production with **Netlify** for fast, reliable, and scalable hosting.
 
 ## 🛠️ Tech Stack
 
@@ -29,11 +29,11 @@ Welcome to **CarConnect**, the ultimate marketplace for buying and selling cars!
 - **Component Library:** ShadCN 🛠️
 - **Mock Data:** Faker.dev 📊
 - **APIs:** Acernity 🌐
-- **Deployment:** Vercel 🚀
+- **Deployment:** Netlify 🚀
 
 ## 🚀 Live Demo
 
-Check out the live version of CarConnect here: [CarConnect on Vercel](https://carconnect.vercel.app)
+Check out the live version of CarConnect here: [CarConnect on Netlify](https://car-connect-marketplace.netlify.app/)
 
 ## 📥 Installation
 
