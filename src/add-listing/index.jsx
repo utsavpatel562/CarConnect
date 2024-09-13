@@ -9,6 +9,8 @@ import { Separator } from "@/components/ui/separator";
 import features from "./../Shared/features.json";
 import { Button } from "@/components/ui/button";
 import TextAreaField from "./components/TextAreaField";
+import { db } from "./../../configs";
+import { CarListing } from "./../../configs/schema";
 
 function AddListing() {
   const [formData, setFormData] = useState([]);
@@ -20,9 +22,18 @@ function AddListing() {
     console.log(formData);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
+
+    try {
+      const result = await db.insert(CarListing).values(formData);
+      if (result) {
+        console.log("Data Saved");
+      }
+    } catch (e) {
+      console.log("Error", e);
+    }
   };
 
   return (

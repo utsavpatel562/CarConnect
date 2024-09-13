@@ -6,6 +6,7 @@ function InputField({ item, handleInputChange }) {
     <>
       <div>
         <Input
+          autocomplete="off"
           className="mt-2"
           type={item?.fieldType}
           name={item?.name}

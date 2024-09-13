@@ -19,6 +19,7 @@
             "label": "Original Price",
             "name" : "originalPrice",
             "fieldType" : "text",
+            "required": true,
             "column": 1,
             "icon" : "FaMoneyBillAlt"
         },
@@ -144,6 +145,7 @@
             "label": "Engine Size",
             "name" : "engineSize",
             "fieldType" : "text",
+            "required": true,
             "column": 1,
             "icon" : "FaWrench"
         },
