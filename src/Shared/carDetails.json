@@ -39,7 +39,7 @@
             "required": true,
             "options": ["New", "Used", "Certified Pre-Owned"],
             "column": 1,
-            "icon" : "FaCheckedCircle"
+            "icon" : "FaCheckCircle"
         },
         {
             "label": "Type",
@@ -163,7 +163,7 @@
             "required": true,
             "options": ["White", "Black", "Blue", "Green", "Silver", "Gold", "Pink"],
             "column": 2,
-            "icon" : "FaPalette"
+            "icon" : "FaPallet"
         },
         {
             "label": "Door",
