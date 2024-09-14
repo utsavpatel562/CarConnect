@@ -15,6 +15,9 @@ import IconField from "./components/IconField";
 
 function AddListing() {
   const [formData, setFormData] = useState([]);
+
+  const [featuresData, setFeaturesData] = useState([]);
+
   const handleInputChange = (name, value) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -23,12 +26,23 @@ function AddListing() {
     console.log(formData);
   };
 
+  const handleFeaturesChange = (name, value) => {
+    setFeaturesData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+    console.log(featuresData);
+  };
+
   const onSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
 
     try {
-      const result = await db.insert(CarListing).values(formData);
+      const result = await db.insert(CarListing).values({
+        ...formData,
+        features: featuresData,
+      });
       if (result) {
         console.log("Data Saved");
       }
@@ -87,7 +101,7 @@ function AddListing() {
                   <div key={index} className="flex gap-2 items-center">
                     <Checkbox
                       onCheckedChange={(value) =>
-                        handleInputChange(item.name, value)
+                        handleFeaturesChange(item.name, value)
                       }
                       className="h-5 w-5 text-indigo-600 border-gray-300 rounded"
                     />
