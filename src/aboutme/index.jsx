@@ -8,10 +8,16 @@ import { Link } from "react-router-dom";
 function AboutUs() {
   return (
     <>
-      <div>
-        <Header />
-        <div className="flex justify-center items-center my-20">
-          <div className="w-[30%]">
+      <Header />
+      <div
+        className="h-screen w-full"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(238,231,248,1) 0%, rgba(239,239,239,1) 50%, rgba(238,231,248,1) 100%)",
+        }}
+      >
+        <div className="flex justify-center items-center">
+          <div className="w-[30%] mt-20">
             <article className="group">
               <img
                 alt=""
@@ -26,7 +32,7 @@ function AboutUs() {
                   </h3>
                 </a>
 
-                <p className="mt-2 text-justify text-sm/relaxed text-gray-500">
+                <p className="mt-2 text-justify text-sm/relaxed text-gray-700 font-semibold">
                   I am Utsav Patel, the developer behind CarConnect, a
                   marketplace platform for car buyers and sellers. Built with
                   React, Tailwind CSS, Drizzle ORM, and real-time chat powered
