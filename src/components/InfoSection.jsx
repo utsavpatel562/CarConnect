@@ -10,8 +10,8 @@ function InfoSection() {
               <div className="relative h-60 sm:h-80 lg:h-full">
                 <img
                   alt=""
-                  src="/car6.jpeg"
-                  className="absolute inset-0 h-full w-full object-fit rounded-2xl"
+                  src="/car9.jpg"
+                  className="absolute inset-0 h-[100%] w-[100%] object-cover rounded-2xl"
                   style={{
                     boxShadow: "0px 0px 10px 1px rgba(215, 217, 223, 1)",
                   }}
