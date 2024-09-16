@@ -8,6 +8,8 @@ import { ClerkProvider } from "@clerk/clerk-react";
 import Profile from "./profile";
 import AddListing from "./add-listing";
 import AboutUs from "./aboutme";
+import New from "./newMenu";
+import Preowned from "./preowned";
 // Code By Utsav Patel
 const router = createBrowserRouter([
   {
@@ -29,6 +31,15 @@ const router = createBrowserRouter([
   {
     path: "/aboutme",
     element: <AboutUs />,
+  },
+  {
+    path: "/newMenu",
+    element: <New />,
+  },
+  ,
+  {
+    path: "/preowned",
+    element: <Preowned />,
   },
 ]);
 

@@ -27,14 +27,18 @@ function Header() {
               Home
             </li>
           </Link>
-          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
-            <MdOutlineWidgets />
-            New
-          </li>
-          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
-            <IoCarSportOutline />
-            Preowned
-          </li>
+          <Link to={"/newMenu"}>
+            <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+              <MdOutlineWidgets />
+              New
+            </li>
+          </Link>
+          <Link to={"/preowned"}>
+            <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+              <IoCarSportOutline />
+              Preowned
+            </li>
+          </Link>
           <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
             <CiSearch />
             Search
