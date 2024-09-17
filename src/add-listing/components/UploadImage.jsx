@@ -1,6 +1,11 @@
 import React from "react";
 
 function UploadImage() {
+  const onFileSelected = (event) => {
+    const files = event.target.files;
+    console.log(files);
+  };
+
   return (
     <>
       <div>
@@ -16,6 +21,7 @@ function UploadImage() {
           <input
             type="file"
             multiple={true}
+            onChange={onFileSelected}
             id="upload-images"
             className="opacity-0"
           />
