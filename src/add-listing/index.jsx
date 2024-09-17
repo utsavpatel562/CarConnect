@@ -12,6 +12,7 @@ import TextAreaField from "./components/TextAreaField";
 import { db } from "./../../configs";
 import { CarListing } from "./../../configs/schema";
 import IconField from "./components/IconField";
+import UploadImage from "./components/UploadImage";
 
 function AddListing() {
   const [formData, setFormData] = useState([]);
@@ -109,6 +110,8 @@ function AddListing() {
                   </div>
                 ))}
               </div>
+              <Separator className="my-6" />
+              <UploadImage />
               <div className="flex justify-end mt-8">
                 <Button
                   type="submit"
