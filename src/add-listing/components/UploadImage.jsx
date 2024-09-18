@@ -1,4 +1,6 @@
 "use client";
+import { storage } from "../../../configs/firebaseConfig";
+import { ref, uploadBytes } from "firebase/storage";
 import React, { useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 
@@ -16,6 +18,19 @@ function UploadImage() {
   const onImageRemove = (image, index) => {
     const result = selectedFileList.filter((item) => item != image);
     setSelectedFileList(result);
+  };
+
+  const UploadImages = () => {
+    selectedFileList.forEach((file) => {
+      const fileName = Date.now() + "jpeg";
+      const storageRef = ref(storage, "car-marketplace/" + fileName);
+      const metaData = {
+        contentType: "image/jpeg",
+      };
+      uploadBytes(storageRef, file, metaData).then((snapShot) =>
+        console.log("Upload File")
+      );
+    });
   };
 
   return (
