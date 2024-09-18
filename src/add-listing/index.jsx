@@ -111,7 +111,7 @@ function AddListing() {
                 ))}
               </div>
               <Separator className="my-6" />
-              <UploadImage />
+
               <div className="flex justify-end mt-8">
                 <Button
                   type="submit"
@@ -123,6 +123,7 @@ function AddListing() {
               </div>
             </div>
           </form>
+          <UploadImage />
         </div>
       </div>
     </>

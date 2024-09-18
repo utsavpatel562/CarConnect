@@ -1,4 +1,4 @@
-"use client";
+import { Button } from "@/components/ui/button";
 import { storage } from "../../../configs/firebaseConfig";
 import { ref, uploadBytes } from "firebase/storage";
 import React, { useState } from "react";
@@ -6,7 +6,6 @@ import { FaRegTrashCan } from "react-icons/fa6";
 
 function UploadImage() {
   const [selectedFileList, setSelectedFileList] = useState([]);
-
   const onFileSelected = (event) => {
     const files = event.target.files;
     for (let i = 0; i < files?.length; i++) {
@@ -22,14 +21,14 @@ function UploadImage() {
 
   const UploadImages = () => {
     selectedFileList.forEach((file) => {
-      const fileName = Date.now() + "jpeg";
+      const fileName = Date.now() + ".jpeg";
       const storageRef = ref(storage, "car-marketplace/" + fileName);
       const metaData = {
         contentType: "image/jpeg",
       };
-      uploadBytes(storageRef, file, metaData).then((snapShot) =>
-        console.log("Upload File")
-      );
+      uploadBytes(storageRef, file, metaData).then((snapShot) => {
+        console.log("Upload File");
+      });
     });
   };
 
@@ -67,6 +66,7 @@ function UploadImage() {
             className="opacity-0"
           />
         </div>
+        <Button onClick={UploadImages}>Upload Image</Button>
       </div>
     </>
   );
