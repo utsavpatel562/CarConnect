@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 function UploadImage() {
+  const [selectedFileList, setSelectedFileList] = useState([]);
+
   const onFileSelected = (event) => {
     const files = event.target.files;
-    console.log(files);
+    for (let i = 0; i < files?.length; i++) {
+      const file = files[i];
+      setSelectedFileList((prev) => [...prev, file]);
+    }
   };
 
   return (
@@ -13,6 +19,16 @@ function UploadImage() {
           Upload Car Images
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1">
+          <div className="flex flex-wrap justify-start gap-5 my-6">
+            {selectedFileList.map((image, index) => (
+              <div key={index}>
+                <img
+                  src={URL.createObjectURL(image)}
+                  className="w-[200px] h-[200px] object-cover rounded-xl"
+                />
+              </div>
+            ))}
+          </div>
           <label htmlFor="upload-images">
             <div className="border rounded-xl border-dotted border-primary bg-green-100 p-10 cursor-pointer hover:shadow-md">
               <h2 className="text-2xl text-center text-primary">+</h2>
