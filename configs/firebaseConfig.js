@@ -7,12 +7,12 @@ import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "carconnect-d23fd.firebaseapp.com",
-  projectId: "carconnect-d23fd",
-  storageBucket: "carconnect-d23fd.appspot.com",
-  messagingSenderId: "668973556860",
-  appId: "1:668973556860:web:57b9062b1b58290064d5f9",
-  measurementId: "G-Z75ZG7R6YM"
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
