@@ -21,14 +21,19 @@ function UploadImage() {
 
   const UploadImages = () => {
     selectedFileList.forEach((file) => {
-      const fileName = Date.now() + ".jpeg";
-      const storageRef = ref(storage, "car-marketplace/" + fileName);
+      const fileName = Date.now() + ".png";
+      const storageRef = ref(storage, "car_marketplace/" + fileName);
       const metaData = {
-        contentType: "image/jpeg",
+        contentType: "image/png",
       };
-      uploadBytes(storageRef, file, metaData).then((snapShot) => {
-        console.log("Upload File");
-      });
+      uploadBytes(storageRef, file, metaData)
+        .then((snapShot) => {
+          console.log("Upload File");
+        })
+        .catch((error) => {
+          console.error("Error uploading image:", error);
+          // Handle the error here (e.g., display an error message to the user)
+        });
     });
   };
 
