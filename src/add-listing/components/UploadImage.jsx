@@ -22,7 +22,7 @@ function UploadImage() {
   const UploadImages = () => {
     selectedFileList.forEach((file) => {
       const fileName = Date.now() + ".png";
-      const storageRef = ref(storage, "car_marketplace/" + fileName);
+      const storageRef = ref(storage, "car-marketplace/" + fileName);
       const metaData = {
         contentType: "image/png",
       };
