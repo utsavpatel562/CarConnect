@@ -3,6 +3,6 @@ export default {
     schema: "./configs/schema.js",
     dialect: 'postgresql',
     dbCredentials: {
-      url: "YOUR_DRIZZLE_ORM_KEY",
+      url: "postgresql://carconnect_owner:OmDR2fzFLTv0@ep-dawn-truth-a5em5i2k.us-east-2.aws.neon.tech/carconnect?sslmode=require",
     }
   };

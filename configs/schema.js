@@ -23,6 +23,8 @@ export const CarListing = pgTable('carListing', {
     offerType: varchar('offerType'),
     listingDescription: varchar('listingDescription').notNull(),
     features: json('features'),
+    createdBy: varchar('createdBy').notNull(),
+    postedOn: varchar('postedOn')
 })
 export const CarImages = pgTable('carImages', {
     id: serial('id').primaryKey(),
