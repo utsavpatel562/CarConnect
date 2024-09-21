@@ -16,7 +16,7 @@ import UploadImage from "./components/UploadImage";
 import { RiLoader2Fill } from "react-icons/ri";
 import { useNavigate } from "react-router";
 import { useUser } from "@clerk/clerk-react";
-import moment from "moments";
+import moment from "moment";
 
 function AddListing() {
   const [formData, setFormData] = useState([]);
