@@ -1,8 +1,10 @@
 "use client";
+import { db } from "configs";
 import { storage } from "../../../configs/firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React, { useEffect, useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
+import { CarImages } from "../../../configs/schema";
 
 function UploadImage({ triggerUploadImages }) {
   const [selectedFileList, setSelectedFileList] = useState([]);
@@ -39,6 +41,10 @@ function UploadImage({ triggerUploadImages }) {
         .then((resp) => {
           getDownloadURL(storageRef).then(async (downloadUrl) => {
             console.log(downloadUrl);
+            await db.insert(CarImages).values({
+              imageUrl: downloadUrl,
+              carListingId: triggerUploadImages,
+            });
           });
         })
         .catch((error) => {
