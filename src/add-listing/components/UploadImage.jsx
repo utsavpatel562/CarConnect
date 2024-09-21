@@ -1,11 +1,18 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { storage } from "../../../configs/firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 
-function UploadImage() {
+function UploadImage({ triggerUploadImages }) {
   const [selectedFileList, setSelectedFileList] = useState([]);
+  useEffect(() => {
+    if (triggerUploadImages) {
+      UploadImageToServer();
+    }
+  }, [triggerUploadImages]);
+
   const onFileSelected = (event) => {
     const files = event.target.files;
     for (let i = 0; i < files?.length; i++) {
