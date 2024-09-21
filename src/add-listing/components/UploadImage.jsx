@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import { storage } from "../../../configs/firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React, { useEffect, useState } from "react";
