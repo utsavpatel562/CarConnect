@@ -1,5 +1,5 @@
 "use client";
-import { db } from "configs";
+import { db } from "./../../../configs";
 import { storage } from "../../../configs/firebaseConfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React, { useEffect, useState } from "react";
