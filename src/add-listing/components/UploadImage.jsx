@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { storage } from "../../../configs/firebaseConfig";
-import { ref, uploadBytes } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React, { useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 
@@ -29,6 +29,11 @@ function UploadImage() {
       uploadBytes(storageRef, file, metaData)
         .then((snapShot) => {
           console.log("Upload File");
+        })
+        .then((resp) => {
+          getDownloadURL(storageRef).then(async (downloadUrl) => {
+            console.log(downloadUrl);
+          });
         })
         .catch((error) => {
           console.error("Error uploading image:", error);
