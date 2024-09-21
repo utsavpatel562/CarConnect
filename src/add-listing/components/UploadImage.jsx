@@ -19,7 +19,7 @@ function UploadImage() {
     setSelectedFileList(result);
   };
 
-  const UploadImages = () => {
+  const UploadImageToServer = () => {
     selectedFileList.forEach((file) => {
       const fileName = Date.now() + ".png";
       const storageRef = ref(storage, "car-marketplace/" + fileName);
@@ -76,7 +76,6 @@ function UploadImage() {
             className="opacity-0"
           />
         </div>
-        <Button onClick={UploadImages}>Upload Image</Button>
       </div>
     </>
   );
