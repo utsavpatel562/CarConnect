@@ -13,11 +13,15 @@ import { db } from "./../../configs";
 import { CarListing } from "./../../configs/schema";
 import IconField from "./components/IconField";
 import UploadImage from "./components/UploadImage";
+import { RiLoader2Fill } from "react-icons/ri";
+import { useNavigate } from "react-router";
 
 function AddListing() {
   const [formData, setFormData] = useState([]);
   const [featuresData, setFeaturesData] = useState([]);
   const [triggerUploadImages, setTriggerUploadImages] = useState();
+  const [loader, setLoader] = useState(false);
+  const navigate = useNavigate();
 
   const handleInputChange = (name, value) => {
     setFormData((prevData) => ({
@@ -36,6 +40,7 @@ function AddListing() {
   };
 
   const onSubmit = async (e) => {
+    setLoader(true);
     e.preventDefault();
     console.log(formData);
 
@@ -50,6 +55,7 @@ function AddListing() {
       if (result) {
         console.log("Data Saved");
         setTriggerUploadImages(result[0]?.id);
+        setLoader(false);
       }
     } catch (e) {
       console.log("Error", e);
@@ -115,14 +121,24 @@ function AddListing() {
                 ))}
               </div>
               <Separator className="my-6" />
-              <UploadImage triggerUploadImages={triggerUploadImages} />
+              <UploadImage
+                triggerUploadImages={triggerUploadImages}
+                setLoader={(v) => {
+                  setLoader(v);
+                  navigate("/profile");
+                }}
+              />
               <div className="flex justify-end mt-8">
                 <Button
                   type="submit"
                   onClick={(e) => onSubmit(e)}
                   className="px-6 py-3 bg-primary text-white font-semibold rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-200"
                 >
-                  Submit
+                  {!loader ? (
+                    "Submit"
+                  ) : (
+                    <RiLoader2Fill className="animate-spin text-lg" />
+                  )}
                 </Button>
               </div>
             </div>

@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { CarImages } from "../../../configs/schema";
 
-function UploadImage({ triggerUploadImages }) {
+function UploadImage({ triggerUploadImages, setLoader }) {
   const [selectedFileList, setSelectedFileList] = useState([]);
   useEffect(() => {
     if (triggerUploadImages) {
@@ -27,8 +27,9 @@ function UploadImage({ triggerUploadImages }) {
     setSelectedFileList(result);
   };
 
-  const UploadImageToServer = () => {
-    selectedFileList.forEach((file) => {
+  const UploadImageToServer = async () => {
+    setLoader(true);
+    await selectedFileList.forEach((file) => {
       const fileName = Date.now() + ".png";
       const storageRef = ref(storage, "car-marketplace/" + fileName);
       const metaData = {
@@ -51,6 +52,7 @@ function UploadImage({ triggerUploadImages }) {
           console.error("Error uploading image:", error);
           // Handle the error here (e.g., display an error message to the user)
         });
+      setLoader(false);
     });
   };
 
