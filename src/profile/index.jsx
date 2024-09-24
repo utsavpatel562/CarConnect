@@ -1,30 +1,12 @@
 import Header from "@/components/Header";
-import React, { useEffect } from "react";
+import React from "react";
 import MyListing from "./components/MyListing";
 import { TbListDetails } from "react-icons/tb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MdAllInbox } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
-import { db } from "./../../configs";
-import { CarImages, CarListing } from "./../../configs/schema";
-import { desc, eq } from "drizzle-orm";
-import { useUser } from "@clerk/clerk-react";
 
 function Profile() {
-  const { user } = useUser();
-  useEffect(() => {
-    user && GetUserCarListing();
-  }, [user]);
-  const GetUserCarListing = async () => {
-    const result = await db
-      .select()
-      .from(CarListing)
-      .leftJoin(CarImages, eq(CarListing.id, CarImages.carListingId))
-      .where(eq(CarListing.createdBy, user?.primaryEmailAddress.emailAddress))
-      .orderBy(desc(CarListing.id));
-    console.log(result);
-  };
-
   return (
     <>
       <div>
