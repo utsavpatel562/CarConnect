@@ -22,5 +22,5 @@ const FormResult = (resp) => {
   return finalResult;
 };
 export default {
-  FormData,
+  FormResult,
 };
