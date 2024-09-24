@@ -7,6 +7,8 @@ import { desc, eq } from "drizzle-orm";
 import { useUser } from "@clerk/clerk-react";
 import Services from "@/Shared/Services";
 import CarItem from "@/components/CarItem";
+import { FaRegTrashAlt } from "react-icons/fa";
+import { FiEdit } from "react-icons/fi";
 
 function MyListing() {
   const { user } = useUser();
@@ -35,10 +37,20 @@ function MyListing() {
             <Button>+ Add New Listing</Button>
           </Link>
         </div>
-        <div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-7 gap-5">
           {carList.map((item, index) => (
             <div key={index}>
               <CarItem car={item} />
+              <div className="flex gap-2 mt-3">
+                <Button className="flex items-center gap-1 p-5 bg-orange-400 hover:bg-orange-500">
+                  Edit
+                  <FiEdit />
+                </Button>
+                <Button className="flex items-center gap-1 p-5 bg-red-600 hover:bg-red-700">
+                  Move to trash
+                  <FaRegTrashAlt />
+                </Button>
+              </div>
             </div>
           ))}
         </div>
