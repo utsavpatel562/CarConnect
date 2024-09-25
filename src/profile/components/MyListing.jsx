@@ -42,12 +42,11 @@ function MyListing() {
             <div key={index}>
               <CarItem car={item} />
               <div className="flex gap-2 mt-3">
-                <Button className="flex items-center gap-1 p-5 bg-orange-400 hover:bg-orange-500">
-                  Edit
+                <Button className="flex items-center gap-1 p-5 bg-orange-400 hover:bg-orange-500 w-full">
+                  Edit Post
                   <FiEdit />
                 </Button>
-                <Button className="flex items-center gap-1 p-5 bg-red-600 hover:bg-red-700">
-                  Move to trash
+                <Button className="flex items-center p-5 bg-red-600 hover:bg-red-700">
                   <FaRegTrashAlt />
                 </Button>
               </div>
