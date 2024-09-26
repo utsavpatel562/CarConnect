@@ -1,4 +1,9 @@
-"use client";
+{
+  /* Very important file for inserting data to database and also used to
+  to update the existing value in database.*/
+}
+
+("use client");
 import Header from "@/components/Header";
 import React, { useState } from "react";
 import carDetails from "./../Shared/carDetails.json";

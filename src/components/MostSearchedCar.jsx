@@ -40,7 +40,7 @@ const MostSearchedCar = () => {
         <Carousel>
           <CarouselContent>
             {carList.map((car, index) => (
-              <CarouselItem className="basis-1/4">
+              <CarouselItem key={index} className="basis-1/4">
                 <CarItem car={car} key={index} />
               </CarouselItem>
             ))}
