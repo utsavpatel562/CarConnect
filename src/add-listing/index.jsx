@@ -55,6 +55,7 @@ function AddListing() {
       .where(eq(CarListing.id, recordId));
     const resp = Services.FormResult(result);
     setCarInfo(resp[0]);
+    setFeaturesData(resp[0].features);
   };
 
   const handleInputChange = (name, value) => {
@@ -154,6 +155,7 @@ function AddListing() {
                         handleFeaturesChange(item.name, value)
                       }
                       className="h-5 w-5 text-indigo-600 border-gray-300 rounded"
+                      checked={featuresData?.[item.name]}
                     />
                     <span className="text-gray-700">{item.label}</span>
                   </div>
