@@ -42,7 +42,7 @@ function MyListing() {
             <div key={index}>
               <CarItem car={item} />
               <div className="flex gap-2 mt-3">
-                <Button className="flex items-center gap-1 p-5 bg-orange-400 hover:bg-orange-500 w-full">
+                <Button className="flex items-center gap-1 p-5 bg-gray-700 hover:bg-gray-800 w-full">
                   Edit Post
                   <FiEdit />
                 </Button>
