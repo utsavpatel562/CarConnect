@@ -5,7 +5,7 @@
 
 ("use client");
 import Header from "@/components/Header";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import carDetails from "./../Shared/carDetails.json";
 import InputField from "./components/InputField";
 import DropdownField from "./components/DropdownField";
@@ -15,21 +15,47 @@ import features from "./../Shared/features.json";
 import { Button } from "@/components/ui/button";
 import TextAreaField from "./components/TextAreaField";
 import { db } from "./../../configs";
-import { CarListing } from "./../../configs/schema";
+import { CarImages, CarListing } from "./../../configs/schema";
 import IconField from "./components/IconField";
 import UploadImage from "./components/UploadImage";
 import { RiLoader2Fill } from "react-icons/ri";
 import { useNavigate } from "react-router";
 import { useUser } from "@clerk/clerk-react";
 import moment from "moment";
+import { useSearchParams } from "react-router-dom";
+import { eq } from "drizzle-orm";
+import Services from "@/Shared/Services";
 
 function AddListing() {
   const [formData, setFormData] = useState([]);
   const [featuresData, setFeaturesData] = useState([]);
+
+  const [searchParams] = useSearchParams();
+
   const [triggerUploadImages, setTriggerUploadImages] = useState();
   const [loader, setLoader] = useState(false);
+  const [carInfo, setCarInfo] = useState();
   const navigate = useNavigate();
   const { user } = useUser();
+
+  const mode = searchParams.get("mode");
+  const recordId = searchParams.get("id");
+
+  useEffect(() => {
+    if (mode == "edit") {
+      GetListingDetail();
+    }
+  }, []);
+
+  const GetListingDetail = async () => {
+    const result = await db
+      .select()
+      .from(CarListing)
+      .innerJoin(CarImages, eq(CarListing.id, CarImages.carListingId))
+      .where(eq(CarListing.id, recordId));
+    const resp = Services.FormResult(result);
+    setCarInfo(resp[0]);
+  };
 
   const handleInputChange = (name, value) => {
     setFormData((prevData) => ({
@@ -93,18 +119,21 @@ function AddListing() {
                     </label>
                     {item.fieldType == "text" || item.fieldType == "number" ? (
                       <InputField
+                        carInfo={carInfo}
                         item={item}
                         handleInputChange={handleInputChange}
                         className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                       />
                     ) : item.fieldType == "dropdown" ? (
                       <DropdownField
+                        carInfo={carInfo}
                         handleInputChange={handleInputChange}
                         item={item}
                         className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                       />
                     ) : item.fieldType == "textarea" ? (
                       <TextAreaField
+                        carInfo={carInfo}
                         item={item}
                         handleInputChange={handleInputChange}
                         className="mt-2 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
