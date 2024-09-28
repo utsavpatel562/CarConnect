@@ -55,6 +55,7 @@ function AddListing() {
       .where(eq(CarListing.id, recordId));
     const resp = Services.FormResult(result);
     setCarInfo(resp[0]);
+    setFormData(resp[0]);
     setFeaturesData(resp[0].features);
   };
 
@@ -79,23 +80,43 @@ function AddListing() {
     e.preventDefault();
     console.log(formData);
 
-    try {
+    if (mode == "edit") {
       const result = await db
-        .insert(CarListing)
-        .values({
+        .update(CarListing)
+        .set({
           ...formData,
           features: featuresData,
           createdBy: user?.primaryEmailAddress?.emailAddress,
+          userName: user?.fullName,
+          userImageUrl: user?.imageUrl,
           postedOn: moment().format("DD/MM/yyyy"),
         })
+        .where(eq(CarListing.id, recordId))
         .returning({ id: CarListing.id });
-      if (result) {
-        console.log("Data Saved");
-        setTriggerUploadImages(result[0]?.id);
-        setLoader(false);
+      console.log(result);
+      navigate("/profile");
+      setLoader(false);
+    } else {
+      try {
+        const result = await db
+          .insert(CarListing)
+          .values({
+            ...formData,
+            features: featuresData,
+            createdBy: user?.primaryEmailAddress?.emailAddress,
+            userName: user?.fullName,
+            userImageUrl: user?.imageUrl,
+            postedOn: moment().format("DD/MM/yyyy"),
+          })
+          .returning({ id: CarListing.id });
+        if (result) {
+          console.log("Data Saved");
+          setTriggerUploadImages(result[0]?.id);
+          setLoader(false);
+        }
+      } catch (e) {
+        console.log("Error", e);
       }
-    } catch (e) {
-      console.log("Error", e);
     }
   };
 
