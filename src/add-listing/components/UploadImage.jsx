@@ -5,6 +5,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import React, { useEffect, useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { CarImages } from "../../../configs/schema";
+import { eq } from "drizzle-orm";
 
 function UploadImage({ triggerUploadImages, setLoader, carInfo, mode }) {
   const [selectedFileList, setSelectedFileList] = useState([]);
@@ -36,6 +37,15 @@ function UploadImage({ triggerUploadImages, setLoader, carInfo, mode }) {
   const onImageRemove = (image, index) => {
     const result = selectedFileList.filter((item) => item != image);
     setSelectedFileList(result);
+  };
+
+  const onImageRemoveFromDB = async (image, index) => {
+    const result = await db
+      .delete(CarImages)
+      .where(eq(CarImages.id, carInfo?.images[index]?.id))
+      .returning({ id: CarImages.id });
+    const imageList = EditCarImageList.filter((item) => item != image);
+    setEditCarImageList(imageList);
   };
 
   const UploadImageToServer = async () => {
@@ -92,7 +102,7 @@ function UploadImage({ triggerUploadImages, setLoader, carInfo, mode }) {
               <div key={index}>
                 <FaRegTrashCan
                   className="cursor-pointer absolute m-2 text-lg h-6 w-6 text-white bg-slate-800 rounded-full p-1"
-                  onClick={() => onImageRemove(image, index)}
+                  onClick={() => onImageRemoveFromDB(image, index)}
                 />
                 <img
                   src={URL.createObjectURL(image)}
