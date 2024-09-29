@@ -12,6 +12,7 @@ function UploadImage({ triggerUploadImages, setLoader, carInfo, mode }) {
 
   useEffect(() => {
     if (mode == "edit") {
+      setEditCarImageList([]);
       carInfo?.images.forEach((image) => {
         setEditCarImageList((prev) => [...prev, image?.imageUrl]);
       });
