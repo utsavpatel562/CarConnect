@@ -6,8 +6,18 @@ import React, { useEffect, useState } from "react";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { CarImages } from "../../../configs/schema";
 
-function UploadImage({ triggerUploadImages, setLoader }) {
+function UploadImage({ triggerUploadImages, setLoader, carInfo, mode }) {
   const [selectedFileList, setSelectedFileList] = useState([]);
+  const [EditCarImageList, setEditCarImageList] = useState([]);
+
+  useEffect(() => {
+    if (mode == "edit") {
+      carInfo?.images.forEach((image) => {
+        setEditCarImageList((prev) => [...prev, image?.imageUrl]);
+      });
+    }
+  }, [carInfo]);
+
   useEffect(() => {
     if (triggerUploadImages) {
       UploadImageToServer();
@@ -64,6 +74,19 @@ function UploadImage({ triggerUploadImages, setLoader }) {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-1">
           <div className="flex flex-wrap justify-start gap-5 my-6">
+            {mode == "edit" &&
+              EditCarImageList.map((image, index) => (
+                <div key={index}>
+                  <FaRegTrashCan
+                    className="cursor-pointer absolute m-2 text-lg h-6 w-6 text-white bg-slate-800 rounded-full p-1"
+                    onClick={() => onImageRemove(image, index)}
+                  />
+                  <img
+                    src={image}
+                    className="w-[200px] h-[200px] object-cover rounded-xl"
+                  />
+                </div>
+              ))}
             {selectedFileList.map((image, index) => (
               <div key={index}>
                 <FaRegTrashCan

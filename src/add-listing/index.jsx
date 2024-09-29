@@ -184,6 +184,8 @@ function AddListing() {
               </div>
               <Separator className="my-6" />
               <UploadImage
+                carInfo={carInfo}
+                mode={mode}
                 triggerUploadImages={triggerUploadImages}
                 setLoader={(v) => {
                   setLoader(v);
