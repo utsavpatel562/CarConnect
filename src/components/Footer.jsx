@@ -3,78 +3,16 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer className="bg-gray-100">
+      <footer className="bg-zinc-800">
         <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex justify-center text-teal-600">
-            <img src="/logo2.png" width={50} height={50} />
+          <div className="flex justify-center text-teal-600 bg-white w-[60px] h-[60px] m-auto p-2  rounded-xl">
+            <img src="/logo2.png" width={40} />
           </div>
 
           <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
             © 2024 CarConnect. All rights reserved. Connecting you with the
             perfect car, anytime, anywhere.
           </p>
-
-          <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                About{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Careers{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                History{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Services{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Projects{" "}
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-700 transition hover:text-gray-700/75"
-                href="#"
-              >
-                {" "}
-                Blog{" "}
-              </a>
-            </li>
-          </ul>
 
           <ul className="mt-12 flex justify-center gap-6 md:gap-8">
             <li>

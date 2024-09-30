@@ -57,7 +57,7 @@ function UploadImage({ triggerUploadImages, setLoader, carInfo, mode }) {
         contentType: "image/png",
       };
       uploadBytes(storageRef, file, metaData)
-        .then((snapShot) => {
+        .then((_snapShot) => {
           console.log("Upload File");
         })
         .then((resp) => {
@@ -102,7 +102,7 @@ function UploadImage({ triggerUploadImages, setLoader, carInfo, mode }) {
               <div key={index}>
                 <FaRegTrashCan
                   className="cursor-pointer absolute m-2 text-lg h-6 w-6 text-white bg-slate-800 rounded-full p-1"
-                  onClick={() => onImageRemove(image, index)}
+                  onClick={() => onImageRemoveFromDB(image, index)}
                 />
                 <img
                   src={URL.createObjectURL(image)}
