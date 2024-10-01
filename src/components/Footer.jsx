@@ -3,13 +3,13 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer className="bg-zinc-800">
+      <footer className="bg-zinc-100">
         <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex justify-center text-teal-600 bg-white w-[60px] h-[60px] m-auto p-2  rounded-xl">
+          <div className="flex justify-center text-teal-600 m-auto">
             <img src="/logo2.png" width={40} />
           </div>
 
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-400">
+          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-600">
             © 2024 CarConnect. All rights reserved. Connecting you with the
             perfect car, anytime, anywhere.
           </p>
@@ -20,7 +20,7 @@ function Footer() {
                 href="https://www.linkedin.com/in/utsav-patel-coder"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-400 transition hover:text-gray-400/75"
+                className="text-gray-600 transition hover:text-gray-600/75"
               >
                 <span className="sr-only">LinkedIn</span>
                 <svg
@@ -41,7 +41,7 @@ function Footer() {
                 href="https://www.instagram.com/utsavpatel_01/"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-400 transition hover:text-gray-400/75"
+                className="text-gray-600 transition hover:text-gray-600/75"
               >
                 <span className="sr-only">Instagram</span>
                 <svg
@@ -64,7 +64,7 @@ function Footer() {
                 href="https://github.com/utsavpatel562"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-400 transition hover:text-gray-400/75"
+                className="text-gray-600 transition hover:text-gray-600/75"
               >
                 <span className="sr-only">GitHub</span>
                 <svg
