@@ -42,12 +42,12 @@ function HowitWorks() {
                   <TbLockCog />
                 </span>
 
-                <h2 className="mt-2 font-bold">
+                <h2 className="mt-2 font-bold text-white">
                   User Registration & Authentication
                 </h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-300">
-                  Secure user auth, ensures that all transactions are protected
+                  Secure user auth. and all transac. are protected
                 </p>
               </a>
               <a
@@ -58,10 +58,12 @@ function HowitWorks() {
                   <FaSearchengin />
                 </span>
 
-                <h2 className="mt-2 font-bold">Browsing & Searching Cars</h2>
+                <h2 className="mt-2 font-bold text-white">
+                  Browsing & Searching Cars
+                </h2>
 
                 <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-300">
-                  Advanced search, allow users to effortlessly find cars.
+                  Advanced search, allow users to find cars.
                 </p>
               </a>
               <a
@@ -72,11 +74,12 @@ function HowitWorks() {
                   <LuMessagesSquare />
                 </span>
 
-                <h2 className="mt-2 font-bold">Real-Time Messaging</h2>
+                <h2 className="mt-2 font-bold text-white">
+                  Real-Time Messaging
+                </h2>
 
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Sellers can create detailed listings to showcase their
-                  vehicles.
+                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-300">
+                  Create detailed listings to showcase their vehicles.
                 </p>
               </a>
               <a
@@ -87,12 +90,12 @@ function HowitWorks() {
                   <FaHandHoldingDollar />
                 </span>
 
-                <h2 className="mt-2 font-bold">
-                  Data Management & API Integration
+                <h2 className="mt-2 font-bold text-white">
+                  Listing a Car for Sale
                 </h2>
 
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Efficient data management and API integrations.
+                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-300">
+                  Create detailed listings to showcase their vehicles.
                 </p>
               </a>
               <a
@@ -103,10 +106,12 @@ function HowitWorks() {
                   <PiChartDonutDuotone />
                 </span>
 
-                <h2 className="mt-2 font-bold">Deployment & Hosting</h2>
+                <h2 className="mt-2 font-bold text-white">
+                  Data Management & API Integration
+                </h2>
 
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Fast and reliable deployment on Vercel
+                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-300">
+                  Efficient data manage and API integrations.
                 </p>
               </a>
               <a
@@ -117,10 +122,12 @@ function HowitWorks() {
                   <AiOutlineDeploymentUnit />
                 </span>
 
-                <h2 className="mt-2 font-bold">Accountant</h2>
+                <h2 className="mt-2 font-bold text-white">
+                  Deployment & Hosting
+                </h2>
 
-                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-600">
-                  Lorem ipsum dolor sit amet consectetur.
+                <p className="hidden sm:mt-1 sm:block sm:text-sm sm:text-gray-300">
+                  Fast and reliable deployment on Vercel
                 </p>
               </a>
             </div>
