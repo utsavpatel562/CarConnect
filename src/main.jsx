@@ -11,6 +11,7 @@ import AboutUs from "./aboutme";
 import New from "./newMenu";
 import Preowned from "./preowned";
 import SearchByCategory from "./search/[category]";
+import SearchByOptions from "./search";
 // Code By Utsav Patel
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/preowned",
     element: <Preowned />,
+  },
+  {
+    path: "/search",
+    element: <SearchByOptions />,
   },
   {
     path: "/search/:category",

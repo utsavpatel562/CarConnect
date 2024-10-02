@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -11,13 +11,17 @@ import { CiSearch } from "react-icons/ci";
 import Data from "@/Shared/Data";
 
 function Search() {
+  const [cars, setCars] = useState();
+  const [make, setMake] = useState();
+  const [price, setPrice] = useState();
+
   return (
     <>
       <div
         className="p-2 bg-slate-800 text-slate-200 md:p-3 rounded-md md:rounded-full flex-col md:flex md:flex-row gap-10 px-5 items-center w-[60%]"
         id="newSearch"
       >
-        <Select>
+        <Select onValueChange={(value) => setCars()}>
           <SelectTrigger className="outline-none md:border-none w-full shadow-none text-lg">
             <SelectValue placeholder="Cars" />
           </SelectTrigger>
