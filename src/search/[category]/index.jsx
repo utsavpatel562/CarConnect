@@ -44,11 +44,17 @@ function SearchByCategory() {
         <div className="p-10 md:px-20">
           <h2 className="font-bold text-4xl">{category}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-7">
-            {carList.map((item, index) => (
-              <div key={index}>
-                <CarItem car={item} />
+            {carList?.length > 0 ? (
+              carList.map((item, index) => (
+                <div key={index}>
+                  <CarItem car={item} />
+                </div>
+              ))
+            ) : (
+              <div className="text-lg font-semibold text-gray-600">
+                No listing currently for you!
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
