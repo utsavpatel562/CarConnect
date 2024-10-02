@@ -3,12 +3,14 @@ import Search from "@/components/Search";
 import { db } from "../../../configs";
 import { CarImages, CarListing } from "../../../configs/schema";
 import { eq } from "drizzle-orm";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Services from "@/Shared/Services";
+import CarItem from "@/components/CarItem";
 
 function SearchByCategory() {
   const { category } = useParams();
+  const [carList, setCarList] = useState([]);
   console.log(category);
 
   useEffect(() => {
@@ -23,7 +25,7 @@ function SearchByCategory() {
       .where(eq(CarListing.category, category));
 
     const resp = Services.FormResult(result);
-    console.log(resp);
+    setCarList(resp);
   };
 
   return (
@@ -39,8 +41,15 @@ function SearchByCategory() {
         >
           <Search />
         </div>
-        <div>
-          <h2 className="font-bold text-4xl p-10 md:px-20">{category}</h2>
+        <div className="p-10 md:px-20">
+          <h2 className="font-bold text-4xl">{category}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-7">
+            {carList.map((item, index) => (
+              <div key={index}>
+                <CarItem car={item} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
