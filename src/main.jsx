@@ -10,6 +10,7 @@ import AddListing from "./add-listing";
 import AboutUs from "./aboutme";
 import New from "./newMenu";
 import Preowned from "./preowned";
+import SearchByCategory from "./search/[category]";
 // Code By Utsav Patel
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
   {
     path: "/preowned",
     element: <Preowned />,
+  },
+  {
+    path: "/search/:category",
+    element: <SearchByCategory />,
   },
 ]);
 
