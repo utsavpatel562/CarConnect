@@ -1,6 +1,6 @@
 "use client";
 import Header from "@/components/Header";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import DetailHeader from "../components/DetailHeader";
 import { useParams } from "react-router";
 import { db } from "../../../configs";
@@ -10,7 +10,7 @@ import Services from "@/Shared/Services";
 
 function ListingDetail() {
   const { id } = useParams();
-  console.log(id);
+  const [carDetail, setCarDetail] = useState();
 
   useEffect(() => {
     GetCarDetail();
@@ -20,20 +20,18 @@ function ListingDetail() {
     const result = await db
       .select()
       .from(CarListing)
-      .innerJoin(
-        CarImages,
-        eq(CarImages, eq(CarListing.id, CarImages.carListingId))
-      )
+      .innerJoin(CarImages, eq(CarImages.carListingId, CarListing.id))
       .where(eq(CarListing.id, id));
+
     const resp = Services.FormResult(result);
-    console.log(resp);
+    setCarDetail(resp[0]);
   };
   return (
     <>
       <div>
         <Header />
         <div className="p-10 md:px-20">
-          <DetailHeader />
+          <DetailHeader carDetail={carDetail} />
         </div>
       </div>
     </>
