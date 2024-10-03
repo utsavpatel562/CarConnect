@@ -52,7 +52,7 @@ function SearchByCategory() {
               ))
             ) : (
               <div className="text-lg font-semibold text-gray-600">
-                No listing currently for you!
+                No listing for {category} currently.
               </div>
             )}
           </div>

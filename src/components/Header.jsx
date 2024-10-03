@@ -1,7 +1,6 @@
 "use client";
 import { SignInButton, UserButton, useUser } from "@clerk/clerk-react";
 import React from "react";
-import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import { Button } from "./ui/button";
 import { TiThList } from "react-icons/ti";
 import { Link } from "react-router-dom";
@@ -19,7 +18,15 @@ function Header() {
         className="flex justify-between items-center shadow-sm p-5"
         style={{}}
       >
-        <img src="/logo4.png" alt="Logo" width={150} height={100} />
+        <Link to={"/"}>
+          <img
+            src="/logo4.png"
+            alt="Logo"
+            width={150}
+            height={100}
+            className="cursor-pointer"
+          />
+        </Link>
         <ul className="hidden md:flex gap-10">
           <Link to={"/"}>
             <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
