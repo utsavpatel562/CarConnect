@@ -28,6 +28,18 @@ function MyListing() {
     console.log(resp);
     setCarList(resp);
   };
+  {
+    /* Handle Delete Query from Database */
+  }
+  const handleDelete = async (id) => {
+    try {
+      await db.delete(CarImages).where(eq(CarImages.carListingId, id));
+      await db.delete(CarListing).where(eq(CarListing.id, id));
+      GetUserCarListing();
+    } catch (error) {
+      console.error("Failed to delete listing", error);
+    }
+  };
   return (
     <>
       <div>
@@ -51,7 +63,10 @@ function MyListing() {
                     <FiEdit />
                   </Button>
                 </Link>
-                <Button className="flex items-center gap-1 p-5 bg-red-600 hover:bg-red-700">
+                <Button
+                  className="flex items-center gap-1 p-5 bg-red-600 hover:bg-red-700"
+                  onClick={() => handleDelete(item?.id)}
+                >
                   Move to Trash
                   <FaRegTrashAlt />
                 </Button>
