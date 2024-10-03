@@ -46,10 +46,12 @@ function Header() {
               Preowned
             </li>
           </Link>
-          <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
-            <CiSearch />
-            Search
-          </li>
+          <a href="/#searchbytype">
+            <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
+              <CiSearch />
+              Search
+            </li>
+          </a>
           <Link to={"/aboutme"}>
             <li className="flex gap-2 items-center font-medium hover:scale-105 transition-all cursor-pointer hover:text-primary">
               <GoCodeSquare />

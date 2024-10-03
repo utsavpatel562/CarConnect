@@ -39,6 +39,7 @@ function SearchByOptions() {
     <>
       <div>
         <Header />
+        <div></div>
         <div className="p-10 md:px-20">
           <h2 className="font-bold text-4xl">Search Result</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-7">

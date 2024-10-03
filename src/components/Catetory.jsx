@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Catetory() {
   return (
     <>
-      <div className="mt-40">
+      <div className="mt-40" id="searchbytype">
         <h2 className="text-3xl text-center mb-6 font-extrabold">
           Browse By Type
         </h2>
