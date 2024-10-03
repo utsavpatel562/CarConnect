@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import FakeData from "@/Shared/FakeData";
 import CarItem from "./CarItem";
 import {
   Carousel,
