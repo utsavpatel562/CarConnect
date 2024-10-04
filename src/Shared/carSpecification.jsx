@@ -7,7 +7,7 @@ export default [
   {
     label: "Condition",
     name: "condition",
-    icon: "FaRegCheckCircle",
+    icon: "FaCheckCircle",
   },
   {
     label: "Model",
@@ -25,14 +25,9 @@ export default [
     icon: "FaWrench",
   },
   {
-    label: "Cylinder",
-    name: "cylinder",
-    icon: "FaCircle",
-  },
-  {
     label: "Color",
     name: "color",
-    icon: "BsPalette2",
+    icon: "FaCircle",
   },
   {
     label: "Door",
