@@ -10,6 +10,7 @@ import Services from "@/Shared/Services";
 import ImageGallery from "../components/ImageGallery";
 import Description from "../components/Description";
 import Features from "../components/Features";
+import Pricing from "../components/Pricing";
 
 function ListingDetail() {
   const { id } = useParams();
@@ -41,7 +42,9 @@ function ListingDetail() {
               <Description carDetail={carDetail} />
               <Features features={carDetail?.features} />
             </div>
-            <div>Right</div>
+            <div>
+              <Pricing carDetail={carDetail} />
+            </div>
           </div>
         </div>
       </div>
