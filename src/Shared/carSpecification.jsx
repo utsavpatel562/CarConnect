@@ -7,7 +7,7 @@ export default [
   {
     label: "Condition",
     name: "condition",
-    icon: "FaCheckCricle",
+    icon: "FaRegCheckCircle",
   },
   {
     label: "Model",
@@ -32,7 +32,7 @@ export default [
   {
     label: "Color",
     name: "color",
-    icon: "FaPalette",
+    icon: "BsPalette2",
   },
   {
     label: "Door",
