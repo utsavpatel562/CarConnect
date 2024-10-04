@@ -3,6 +3,6 @@ export default {
     schema: "./configs/schema.js",
     dialect: 'postgresql',
     dbCredentials: {
-      url: "YOUR_KEY_HERE",
+      url: "YOUR_DRIZZLE_ORM_KEY_HERE",
     }
   };

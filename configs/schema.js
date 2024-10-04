@@ -24,6 +24,8 @@ export const CarListing = pgTable('carListing', {
     listingDescription: varchar('listingDescription').notNull(),
     features: json('features'),
     createdBy: varchar('createdBy').notNull(),
+    userName: varchar('userName').notNull().default('UtsavPatel_01'),
+    userImageUrl:varchar('userImageUrl').default("https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-png-vectors%2Fuser&psig=AOvVaw2n-TZbKkfTzPP75m2scB6T&ust=1728154801435000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLD177q09YgDFQAAAAAdAAAAABAE"),
     postedOn: varchar('postedOn')
 })
 export const CarImages = pgTable('carImages', {
