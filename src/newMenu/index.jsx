@@ -1,9 +1,10 @@
 import Header from "@/components/Header";
 import { CarImages, CarListing } from "../../configs/schema";
-import { desc, eq } from "drizzle-orm";
+import { asc, desc, eq } from "drizzle-orm";
 import React, { useEffect, useState } from "react";
 import { db } from "../../configs";
 import Services from "@/Shared/Services";
+import { MdOutlinePostAdd } from "react-icons/md";
 import CarItem from "@/components/CarItem";
 
 const New = () => {
@@ -18,7 +19,7 @@ const New = () => {
       .select()
       .from(CarListing)
       .leftJoin(CarImages, eq(CarListing.id, CarImages.carListingId))
-      .orderBy(desc(CarListing.id))
+      .orderBy(asc(CarListing.id))
       .limit(10);
 
     const resp = Services.FormResult(result);
@@ -34,9 +35,9 @@ const New = () => {
         {carList.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {carList.map((car, index) => (
-              <div key={index} className="">
-                <p className="bg-blue-100 mb-2 rounded-md p-2 text-center">
-                  Posted on: {car.postedOn}
+              <div key={index}>
+                <p className="mb-2 rounded-md p-2 flex gap-2 items-center w-fit border shadow-sm">
+                  <MdOutlinePostAdd className="w-5 h-5" /> {car.postedOn}
                 </p>
                 <CarItem car={car} />
               </div>

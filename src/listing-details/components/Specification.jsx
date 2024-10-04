@@ -17,13 +17,6 @@ function Specification({ carDetail }) {
             <h2>{carDetail?.[item.name]}</h2>
           </div>
         ))}
-        {/* {carDetail?.length > 0 &&
-          carDetail.map((carItem, index) => (
-            <div>
-              <IconField icon={carSpecification[index]?.icon} />
-            </div>
-          ))}
-            */}
       </div>
     </>
   );
