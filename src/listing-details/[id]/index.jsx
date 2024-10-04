@@ -8,6 +8,8 @@ import { CarImages, CarListing } from "../../../configs/schema";
 import { eq } from "drizzle-orm";
 import Services from "@/Shared/Services";
 import ImageGallery from "../components/ImageGallery";
+import Description from "../components/Description";
+import Features from "../components/Features";
 
 function ListingDetail() {
   const { id } = useParams();
@@ -36,6 +38,8 @@ function ListingDetail() {
           <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-5 mt-8">
             <div className="md:col-span-2">
               <ImageGallery carDetail={carDetail} />
+              <Description carDetail={carDetail} />
+              <Features features={carDetail?.features} />
             </div>
             <div>Right</div>
           </div>
