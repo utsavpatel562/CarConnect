@@ -6,7 +6,8 @@ function ImageGallery({ carDetail }) {
       <div>
         <img
           src={carDetail?.images[0].imageUrl}
-          className="w-full h-[500px] rounded-xl object-cover"
+          alt="Car"
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-xl object-cover"
         />
       </div>
     </>
