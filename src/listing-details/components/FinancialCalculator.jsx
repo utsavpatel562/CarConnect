@@ -8,6 +8,7 @@ function FinancialCalculator({ carDetail }) {
   const [interestRate, setInterestRate] = useState(0);
   const [loanTerm, setLoanTerm] = useState(0);
   const [downPayment, setDownPayment] = useState(0);
+  const [monthlyPayment, setMonthlyPayment] = useState(0);
 
   const CalculateMonthlyPayment = () => {
     const Principal = carPrice - downPayment;
@@ -18,7 +19,7 @@ function FinancialCalculator({ carDetail }) {
         Math.pow(1 + MonthlyInterestRate, loanTerm)) /
       (Math.pow(1 + MonthlyInterestRate, loanTerm) - 1);
 
-    console.log(MonthlyPayment);
+    setMonthlyPayment(MonthlyPayment.toFixed(2));
   };
   return (
     <>
@@ -56,6 +57,12 @@ function FinancialCalculator({ carDetail }) {
             />
           </div>
         </div>
+        {monthlyPayment > 0 && (
+          <h2 className="font-medium text-2xl mt-5">
+            Your Monthly Payment is:{" "}
+            <span className="text-gray-700 font-bold">${monthlyPayment}</span>
+          </h2>
+        )}
         <Button
           onClick={CalculateMonthlyPayment}
           className="flex items-center gap-1 mt-4 text-md p-6 w-full rounded-lg"
