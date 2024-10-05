@@ -14,6 +14,7 @@ import Pricing from "../components/Pricing";
 import Specification from "../components/Specification";
 import Footer from "@/components/Footer";
 import OwnerDetail from "../components/OwnerDetail";
+import FinancialCalculator from "../components/FinancialCalculator";
 
 function ListingDetail() {
   const { id } = useParams();
@@ -44,6 +45,7 @@ function ListingDetail() {
               <ImageGallery carDetail={carDetail} />
               <Description carDetail={carDetail} />
               <Features features={carDetail?.features} />
+              <FinancialCalculator carDetail={carDetail} />
             </div>
             <div>
               <Pricing carDetail={carDetail} />
