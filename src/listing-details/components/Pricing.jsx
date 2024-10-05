@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { IoMdPricetag } from "react-icons/io";
-import React from "react";
 
 function Pricing({ carDetail }) {
   return (
