@@ -12,6 +12,7 @@ import Description from "../components/Description";
 import Features from "../components/Features";
 import Pricing from "../components/Pricing";
 import Specification from "../components/Specification";
+import Footer from "@/components/Footer";
 
 function ListingDetail() {
   const { id } = useParams();
@@ -49,6 +50,7 @@ function ListingDetail() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );
