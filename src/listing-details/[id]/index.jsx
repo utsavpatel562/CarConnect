@@ -13,6 +13,7 @@ import Features from "../components/Features";
 import Pricing from "../components/Pricing";
 import Specification from "../components/Specification";
 import Footer from "@/components/Footer";
+import OwnerDetail from "../components/OwnerDetail";
 
 function ListingDetail() {
   const { id } = useParams();
@@ -47,6 +48,7 @@ function ListingDetail() {
             <div>
               <Pricing carDetail={carDetail} />
               <Specification carDetail={carDetail} />
+              <OwnerDetail carDetail={carDetail} />
             </div>
           </div>
         </div>
