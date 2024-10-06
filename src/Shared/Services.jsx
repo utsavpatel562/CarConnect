@@ -1,3 +1,6 @@
+import axios from "axios";
+
+const SendBirdApplicationId = import.meta.env.VITE_SENDBIRD_APP_ID;
 const FormResult = (resp) => {
   let result = [];
   let finalResult = [];
@@ -20,6 +23,17 @@ const FormResult = (resp) => {
     });
   });
   return finalResult;
+};
+const CreateSendBirdUser = (userId, nickName, profileUrl) => {
+  return axios.post(
+    "https://api-" + SendBirdApplicationId + ".sendbird.com/v3/users",
+    {
+      user_Id: userId,
+      nickName: nickName,
+      profile_Url: profileUrl,
+      issue_access_token: false,
+    }
+  );
 };
 export default {
   FormResult,

@@ -12,23 +12,29 @@ function Profile() {
     <>
       <div>
         <Header />
-        <div className="px-24 md:px-24 my-10 mb-20">
+        <div className="px-5 md:px-24 my-10 mb-20">
           <Tabs defaultValue="my-listing" className="w-full">
-            <TabsList className="w-full flex justify-start">
+            <TabsList className="w-full flex justify-start flex-wrap gap-4">
               <TabsTrigger
                 value="my-listing"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 text-sm sm:text-base"
               >
-                <TbListDetails />
+                <TbListDetails className="h-5 w-5" />
                 <span>My Listing</span>
               </TabsTrigger>
-              <TabsTrigger value="inbox" className="flex items-center gap-2">
-                <MdAllInbox />
-                <Inbox />
+              <TabsTrigger
+                value="inbox"
+                className="flex items-center gap-2 text-sm sm:text-base"
+              >
+                <MdAllInbox className="h-5 w-5" />
+                <span>Inbox</span>
               </TabsTrigger>
-              <TabsTrigger value="profile" className="flex items-center gap-2">
-                <CgProfile />
-                Profile
+              <TabsTrigger
+                value="profile"
+                className="flex items-center gap-2 text-sm sm:text-base"
+              >
+                <CgProfile className="h-5 w-5" />
+                <span>Profile</span>
               </TabsTrigger>
             </TabsList>
             <TabsContent value="my-listing" className="my-5">
