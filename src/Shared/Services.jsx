@@ -25,13 +25,16 @@ const FormResult = (resp) => {
   });
   return finalResult;
 };
+
 const CreateSendBirdUser = (userId, nickName, profileUrl) => {
+  console.log("SendBird API Token:", SendBirdApiToken); // Debugging log
+
   return axios.post(
     "https://api-" + SendBirdApplicationId + ".sendbird.com/v3/users",
     {
-      user_Id: userId,
+      user_id: userId,
       nickname: nickName,
-      profile_Url: profileUrl,
+      profile_url: profileUrl,
       issue_access_token: false,
     },
     {
@@ -42,7 +45,25 @@ const CreateSendBirdUser = (userId, nickName, profileUrl) => {
     }
   );
 };
+const CreateSendBirdChannel = (users, title) => {
+  return axios.post(
+    "https://api-" + SendBirdApplicationId + ".sendbird.com/v3/group_channels",
+    {
+      user_ids: users,
+      is_distinct: true,
+      name: title,
+    },
+    {
+      headers: {
+        "Content-Type": "application/json",
+        "Api-Token": SendBirdApiToken,
+      },
+    }
+  );
+};
+
 export default {
   FormResult,
   CreateSendBirdUser,
+  CreateSendBirdChannel,
 };
