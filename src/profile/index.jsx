@@ -5,6 +5,7 @@ import { TbListDetails } from "react-icons/tb";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MdAllInbox } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
+import Inbox from "./components/Inbox";
 
 function Profile() {
   return (
@@ -23,7 +24,7 @@ function Profile() {
               </TabsTrigger>
               <TabsTrigger value="inbox" className="flex items-center gap-2">
                 <MdAllInbox />
-                Inbox
+                <Inbox />
               </TabsTrigger>
               <TabsTrigger value="profile" className="flex items-center gap-2">
                 <CgProfile />
@@ -33,7 +34,9 @@ function Profile() {
             <TabsContent value="my-listing" className="my-5">
               <MyListing />
             </TabsContent>
-            <TabsContent value="inbox">inbox</TabsContent>
+            <TabsContent value="inbox">
+              <Inbox />
+            </TabsContent>
             <TabsContent value="profile">profile</TabsContent>
           </Tabs>
         </div>
