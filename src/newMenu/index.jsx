@@ -6,6 +6,7 @@ import { db } from "../../configs";
 import Services from "@/Shared/Services";
 import { MdOutlinePostAdd } from "react-icons/md";
 import CarItem from "@/components/CarItem";
+import Footer from "@/components/Footer";
 
 const New = () => {
   const [carList, setCarList] = useState([]);
@@ -47,6 +48,7 @@ const New = () => {
           <p>No Cars Available</p>
         )}
       </div>
+      <Footer />
     </>
   );
 };

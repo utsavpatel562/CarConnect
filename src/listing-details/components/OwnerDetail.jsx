@@ -47,7 +47,10 @@ function OwnerDetail({ carDetail }) {
   };
   return (
     <>
-      <div className="p-6 md:p-8 border rounded-xl shadow-md mt-5 md:mt-7 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl">
+      <div
+        className="p-6 md:p-8 border rounded-xl shadow-md mt-5 md:mt-7 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl"
+        id="gotomsg"
+      >
         <h2 className="font-medium text-xl md:text-2xl mb-2 md:mb-3">
           Owner Details
         </h2>

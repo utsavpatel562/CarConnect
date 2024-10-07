@@ -8,6 +8,7 @@ import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Search from "@/components/Search";
 import CarItem from "@/components/CarItem";
+import Footer from "@/components/Footer";
 
 function SearchByOptions() {
   const [searchParam] = useSearchParams();
@@ -40,9 +41,9 @@ function SearchByOptions() {
       <div>
         <Header />
         <div></div>
-        <div className="p-10 md:px-20">
-          <h2 className="font-bold text-4xl">Search Result</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-7">
+        <div className="p-4 md:p-10 lg:px-20">
+          <h2 className="font-bold text-2xl md:text-4xl">Search Result</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mt-5">
             {carList?.length > 0 ? (
               carList.map((item, index) => (
                 <div key={index}>
@@ -50,12 +51,13 @@ function SearchByOptions() {
                 </div>
               ))
             ) : (
-              <div className="text-lg font-semibold text-gray-600">
+              <div className="text-lg font-semibold text-gray-600 col-span-full text-center">
                 No Search Result Found...
               </div>
             )}
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

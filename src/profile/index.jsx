@@ -6,6 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { MdAllInbox } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import Inbox from "./components/Inbox";
+import Footer from "@/components/Footer";
+import MyProfile from "./components/MyProfile";
 
 function Profile() {
   return (
@@ -43,9 +45,12 @@ function Profile() {
             <TabsContent value="inbox">
               <Inbox />
             </TabsContent>
-            <TabsContent value="profile">profile</TabsContent>
+            <TabsContent value="profile">
+              <MyProfile />
+            </TabsContent>
           </Tabs>
         </div>
+        <Footer />
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Footer from "@/components/Footer";
 
 function AboutUs() {
   return (
@@ -67,6 +68,7 @@ function AboutUs() {
             </article>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

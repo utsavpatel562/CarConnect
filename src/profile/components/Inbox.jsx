@@ -28,7 +28,7 @@ function Inbox() {
               appId={import.meta.env.VITE_SENDBIRD_APP_ID}
             >
               <div className="grid grid-cols-1 gap-5 md:grid-cols-3 h-full">
-                <div className="p-5 border shadow-lg">
+                <div className="p-5 border shadow-lg flex justify-center rounded-lg">
                   <GroupChannelList
                     onChannelSelect={(channel) => {
                       setChannelUrl(channel?.url);
@@ -38,7 +38,7 @@ function Inbox() {
                     }}
                   />
                 </div>
-                <div className="md:col-span-2 shadow-lg">
+                <div className="md:col-span-2 shadow-lg flex rounded-lg">
                   <GroupChannel channelUrl={channelUrl} />
                 </div>
               </div>
