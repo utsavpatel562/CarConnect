@@ -2,6 +2,8 @@
 
 Welcome to **CarConnect**, the ultimate marketplace for buying and selling cars! This full-stack application is designed with performance, scalability, and user engagement in mind. It leverages a modern tech stack to deliver an intuitive, responsive, and secure user experience.
 
+<center><img src="public/image.png" alt="IMAGE"/></center>
+
 ## 📈 Key Features
 
 - 🎨 **Responsive UI with React & Tailwind CSS:** Built a clean and modern user interface using **React** and **Tailwind CSS**, ensuring an optimized user experience across all devices.
@@ -45,6 +47,33 @@ Check out the live version of CarConnect here: [CarConnect on Netlify](https://c
 ```bash
 cd CarConnect
 ```
+
+### Create a .env.local file in the root directory of the project.
+```bash
+VITE_CLERK_PUBLISHABLE_KEY= Your_API_key
+VITE_DRIZZLE_DATABASE_URL= Your_API_key
+VITE_FIREBASE_API_KEY= Your_API_key
+VITE_FIREBASE_AUTH_DOMAIN= Your_API_key
+VITE_FIREBASE_PROJECT_ID= Your_API_key
+VITE_FIREBASE_STORAGE_BUCKET= Your_API_key
+VITE_FIREBASE_MESSAGING_SENDER_ID= Your_API_key
+VITE_FIREBASE_APP_ID= Your_API_key
+VITE_FIREBASE_MEASUREMENT_ID= Your_API_key
+VITE_SENDBIRD_APP_ID= Your_API_key
+VITE_SENDBIRD_API_TOKEN= Your_API_key
+```
+
+### Configure Drizzle ORM in drizzle.config.js
+```bash
+export default {
+    schema: "./configs/schema.js",
+    dialect: 'postgresql',
+    dbCredentials: {
+      url: "YOUR_DRIZZLE_ORM_KEY_HERE",
+    }
+  };
+```
+
 ### Run the app:
 ```
 npm run dev
