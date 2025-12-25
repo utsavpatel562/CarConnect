@@ -2,7 +2,7 @@
 
 Welcome to **CarConnect**, the ultimate marketplace for buying and selling cars! This full-stack application is designed with performance, scalability, and user engagement in mind. It leverages a modern tech stack to deliver an intuitive, responsive, and secure user experience.
 
-<center><img src="public/image.png" alt="IMAGE"/></center>
+<center><img src="public/demo.png" alt="IMAGE"/></center>
 
 ## 📈 Key Features
 
